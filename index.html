@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Unit Convertor</title>
+	<style type="text/css">
+		.box{
+			border-radius: 4px solid black;
+			margin-left: 36%;
+			color: black;
+			margin-right: 36.2%;
+			background-color:#F08784 ;
+			padding: 15px;
+			border: 2px solid gold;
+			margin-top: 2%;
+		}
+		h3{
+			margin-left: 100px;
+			margin-top: 10px;
+			margin-bottom: 30px;
+		}
+		h2{
+			color: maroon;
+			background-color: gold;
+			font-family: serif;
+		}
+		input{
+			font-size: 16px;
+		}
+		input:hover{
+			border: 2.9px solid teal;
+			font-size: 16.9px;
+		}
+		h1{
+			font-size: 60px;
+			color: white;
+		}
+		body{
+			background-image:url(9.png);
+			background-size: cover;
+
+		}
+	</style>
+	
+
+</head>
+<body>
+	
+		<h1 align="center"> <u>UNIT</u>-<u>CONVERTOR</u></h1>
+		<h2 align="center">Write Any Number here in Any input box, Your Answer will generate Automatically-</h2>
+		<div class="box">
+	<h3><label> Feet:</label><br>
+	<input type="value" onkeyup="one()"  id="feet"><br>
+	<label>Meter:</label><br>
+	<input type="value" onkeyup="three()" id="m"><br>
+	<label>Kilometer:</label><br>
+	<input type="value" onkeyup="four()"  id="km"><br>
+	<label>miles:</label><br>
+	<input type="value" onkeyup="five()" id="miles"><br>
+	<label>Inch:</label><br>
+	<input type="value" onkeyup="two()"  id="inch"><br>
+	<label>Centimeter:</label><br>
+	<input type="value" onkeyup="six()"  id="cm"><br></h3>
+</div>
+
+	<script type="text/javascript">
+		function one() {
+			
+		var data=document.getElementById("feet").value;
+		document.getElementById("inch").value=data*12;
+		document.getElementById("cm").value=data*30.48;
+		document.getElementById("m").value=data*0.3048;
+		document.getElementById("km").value=data*0.000305;
+		document.getElementById("miles").value=data*0.000189;
+	}
+	function two(){
+		var bata=document.getElementById("inch").value;
+		document.getElementById("cm").value=bata*2.54;
+		document.getElementById("feet").value=bata*0.083333;
+		document.getElementById("m").value=bata*0.0254;
+		document.getElementById("km").value=bata*0.000025;
+		document.getElementById("miles").value=bata*0.000016;
+	}
+	function three(){
+		var lata=document.getElementById("m").value;
+		document.getElementById("cm").value=lata*100;
+		document.getElementById("feet").value=lata*3.28084;
+		document.getElementById("inch").value=lata*39.3701;
+		document.getElementById("km").value=lata*0.001;
+		document.getElementById("miles").value=lata*0.000621;
+	}
+	function four(){
+		var mata=document.getElementById("km").value;
+		document.getElementById("cm").value=mata*100000;
+		document.getElementById("feet").value=mata*3280.84;
+		document.getElementById("inch").value=mata*39370.08;
+		document.getElementById("m").value=mata*1000;
+		document.getElementById("miles").value=mata*0.621371;
+	}
+	function five(){
+		var mata=document.getElementById("miles").value;
+		document.getElementById("cm").value=mata*160934.4;
+		document.getElementById("feet").value=mata*5280;
+		document.getElementById("inch").value=mata*63360;
+		document.getElementById("m").value=mata*1609.344;
+		document.getElementById("km").value=mata*1.609344;
+	}
+	function six(){
+		var mata=document.getElementById("cm").value;
+		document.getElementById("km").value=mata*0.00001;
+		document.getElementById("feet").value=mata*0.032808;
+		document.getElementById("inch").value=mata*0.393701;
+		document.getElementById("m").value=mata*0.01;
+		document.getElementById("miles").value=mata*0.000006;
+	}
+	</script>
+
+
+</body>
+</html>
